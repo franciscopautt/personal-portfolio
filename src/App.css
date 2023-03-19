@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+header {
+  margin: 0;
+  padding: 0;
+}
 .App {
   /* text-align: center; */
+  margin: 0px;
+  padding: 0px;
 }
 
 .App-logo {
@@ -18,7 +24,7 @@
 }
 .App-header {
   background: linear-gradient(320deg, #ACF9CC 0%, #34B4AB 100%);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +44,7 @@
   width: 40%;
   position: absolute;
   bottom: 0;
-  padding: 0;
+  margin: 0;
 }
 
 .App-link {
@@ -84,8 +90,9 @@
 .square{
   width: 66px;
   height: 78px;
-  background-color: red;
+  background-color: gray;
   border-radius: 10px;
+  cursor: pointer;
 }
 .project-title{
   font-family: 'Inter', sans-serif;
@@ -97,6 +104,35 @@ font-weight: 400;
 font-size: 16px;
 color: #828282;
 }
+.projects-list{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 20px;
+  
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .avatar-img{
+    min-width: 60%;
+    /* height: inherit; */
+    position: absolute;
+    bottom: 0px !important;
+    margin-bottom: 0px;
+  }
+  .github-icon{
+    width: 10%;
+  }
+  .projects-list{
+    flex-direction: column;
+  }
+  .App-body{
+    padding-bottom: 40px;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

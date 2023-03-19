@@ -3,6 +3,11 @@ import "./App.css";
 import Avatar from "./Avatar.png";
 import AvatarBlink from "./AvatarBlink.png";
 import Github from "./Github.png";
+import Kamio from "./icon-kamio.png";
+import Ltrans from "./ltrans.jpg";
+import Muta from "./mutaworld.jpg";
+import Fuvadis from "./Fuvadis.jpg";
+import Arl from "./ARL.jpg";
 import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import "react-tooltip/dist/react-tooltip.css";
@@ -40,11 +45,11 @@ function App() {
           className="top-text"
           // Same String at the start will only be typed once, initially
           sequence={[
-            "Scalable App developer with React",
+            "Developing scalable apps with React",
             1000,
-            "Scalable App developer with Javascript",
+            "Developing scalable apps with Javascript",
             1000,
-            "Scalable App developer with React Native",
+            "Developing scalable apps with React Native",
             1000,
           ]}
           speed={50} // Custom Speed from 1-99 - Default Speed: 40
@@ -55,7 +60,7 @@ function App() {
         {/* <div className="imgs-wrapper"> */}
         <img
           onClick={() => {
-            window.open("https://github.com/franciscopautt", "_blank");
+            window.open("https://github.com/franpautt27", "_blank");
           }}
           className="github-icon"
           data-tooltip-id="my-tooltip"
@@ -84,13 +89,7 @@ function App() {
           <p style={{ visibility: "hidden" }}>My projects</p>
         </div>
         <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-around",
-            paddingTop: 20,
-          }}
+         className="projects-list"
         >
           <div
             style={{
@@ -99,11 +98,16 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div className="square" />
+            <div  data-tooltip-id="muta-tooltip"
+          data-tooltip-content="MUTA Generator App" onClick={() => {
+            window.open("https://play.google.com/store/apps/details?id=com.muta&hl=es_CO&gl=US&pli=1", "_blank");
+          }} className="square">
+            <img src={Muta} style={{height: "100%"}} />
+            </div>
             <div style={{ width: 255, marginLeft: 20 }}>
-              <p className="project-title">Proyecto</p>
+              <p className="project-title">MUTA Generator App</p>
               <p className="project-subtitle">
-                Descripción de dos lineas para el proyecto que se desarrolló.
+                Currently developing the mobile version of the Clients Recycling Platform
               </p>
             </div>
           </div>
@@ -114,24 +118,23 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div className="square" />
+            <div data-tooltip-id="kamio-tooltip"
+          data-tooltip-content="Kamio App" onClick={() => {
+            window.open("http://www.rts.com.co/", "_blank");
+          }} className="square">
+            <img src={Kamio} style={{height: "100%"}} />
+            </div>
             <div style={{ width: 255, marginLeft: 20 }}>
-              <p className="project-title">Proyecto</p>
+              <p className="project-title">Kamio App</p>
               <p className="project-subtitle">
-                Descripción de dos lineas para el proyecto que se desarrolló.
+              Social media application focused on colombian truckers
               </p>
             </div>
           </div>
         </div>
 
         <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-around",
-            paddingTop: 20,
-          }}
+          className="projects-list"
         >
           <div
             style={{
@@ -140,11 +143,16 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div className="square" />
+            <div data-tooltip-id="ltrans-tooltip"
+          data-tooltip-content="L-trans web page" onClick={() => {
+            window.open("http://l-trans.co/", "_blank");
+          }}  className="square" >
+            <img src={Ltrans} style={{height: "100%"}} />
+            </div>
             <div style={{ width: 255, marginLeft: 20 }}>
-              <p className="project-title">Proyecto</p>
+              <p className="project-title">L-trans web page</p>
               <p className="project-subtitle">
-                Descripción de dos lineas para el proyecto que se desarrolló.
+              Design and Development of the Ltrans web page
               </p>
             </div>
           </div>
@@ -155,24 +163,23 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div className="square" />
+            <div  data-tooltip-id="fuvadis-tooltip"
+          data-tooltip-content="FUVADIS" onClick={() => {
+            window.open("http://manglar.uninorte.edu.co/handle/10584/9610#page=1", "_blank");
+          }}  className="square">
+            <img src={Fuvadis} style={{height: "100%"}} />
+            </div>
             <div style={{ width: 255, marginLeft: 20 }}>
-              <p className="project-title">Proyecto</p>
+              <p className="project-title">FUVADIS</p>
               <p className="project-subtitle">
-                Descripción de dos lineas para el proyecto que se desarrolló.
+              Development of a Web platform for the attention process
               </p>
             </div>
           </div>
         </div>
 
         <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-around",
-            paddingTop: 20,
-          }}
+          className="projects-list"
         >
           <div
             style={{
@@ -181,11 +188,16 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div className="square" />
-            <div style={{ width: 255, marginLeft: 20 }}>
-              <p className="project-title">Proyecto</p>
+            <div data-tooltip-id="arl-tooltip"
+          data-tooltip-content="COVID-19 Forecast project" onClick={() => {
+            window.open("https://analyticsrlun.shinyapps.io/projectcovid/", "_blank");
+          }}  className="square">
+            <img src={Arl} style={{height: "100%"}} />
+            </div>
+            <div  style={{ width: 255, marginLeft: 20 }}>
+              <p className="project-title">COVID-19 Forecast project</p>
               <p className="project-subtitle">
-                Descripción de dos lineas para el proyecto que se desarrolló.
+                Project in order to predict the risk of dying for Covid patients
               </p>
             </div>
           </div>
@@ -196,17 +208,28 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div className="square" />
+            <div data-tooltip-id="hackathon-tooltip"
+          data-tooltip-content="Laser Pulse Hackathon 2020" onClick={() => {
+            window.open("https://chimerical-palmier-b8c0c1.netlify.app/", "_blank");
+          }}  className="square" style={{overflow: "hidden"}}>
+            <img src="https://laserpulse.org/wp-content/uploads/2021/01/hackathon-social-small.png" style={{ height: "100%"}} />
+            </div>
             <div style={{ width: 255, marginLeft: 20 }}>
-              <p className="project-title">Proyecto</p>
+              <p className="project-title">Laser Pulse Hackathon 2020</p>
               <p className="project-subtitle">
-                Descripción de dos lineas para el proyecto que se desarrolló.
+                Earned the 5th place on a Data analysis and visualization competition
               </p>
             </div>
           </div>
         </div>
       </div>
       <Tooltip id="my-tooltip" />
+      <Tooltip id="muta-tooltip" />
+      <Tooltip id="kamio-tooltip" />
+      <Tooltip id="ltrans-tooltip" />
+      <Tooltip id="fuvadis-tooltip" />
+      <Tooltip id="arl-tooltip" />
+      <Tooltip id="hackathon-tooltip" />
     </div>
   );
 }
